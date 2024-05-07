@@ -5,16 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+
+<style>
+
+body {
+  font-family: "Poetsen One", sans-serif;
+  background-color: #333;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+ text-align: center;
+ font-family: "Oleo Script Swash Caps", system-ui;
+ color: white;
+ font-size: 80px;
+ cursor: default;
+ position: absolute;
+ margin-top: -130px;
+ margin-left: 42%;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 120px;
+  transform: scale(1.2);
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid white;
+  color: white;
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+  transform: scale(1.1);
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1.8rem;
+  font-weight: 1050;
+  padding: 0.7.5rem;
+  margin: 0 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+.keyboard-button:hover {
+  transform: scale(1.1);
+}
+</style>
 <body>
     <h1> Hordle </h1>
-    
     <div id="game-board">
 
     </div>
@@ -56,11 +144,8 @@
         </div>
     </div>
 
-<script
-src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="script.js" type="module"></script>
+<script src="https://hvgs.github.io/wordle/script.js" type="module"></script>
 </body>
 </html>
