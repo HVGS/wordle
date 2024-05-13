@@ -1,4 +1,6 @@
 export const WORDS = [
+    '12345',
+    'abcde',
     'nigga',
     'which',
     'there',
